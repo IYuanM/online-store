@@ -1,0 +1,36 @@
+{
+  "name": "Course",
+  "fields": [
+    {
+      "fieldName": "coursename",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength",
+        "pattern"
+      ],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesPattern": "[a-Z]+"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "course",
+      "relationshipValidateRules": "required",
+      "relationshipName": "student",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20201117105709",
+  "entityTableName": "course",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

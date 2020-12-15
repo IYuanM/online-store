@@ -1,0 +1,13 @@
+
+entity Student {
+	name String required,
+    ID String
+}
+
+entity Course {
+	coursename String maxlength(50) pattern(/[a-Z]+/)
+}
+
+relationship OneToMany{
+	Student{course} to Course{student(name) required}
+}
